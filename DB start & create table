@@ -1,0 +1,25 @@
+MySQL이 설치된 폴더로 이동한 후, 명령 프롬프트를 통해 접속
+: mysql -h localhost -u root -p
+
+DB생성 : CREATE SCHEMA nodejs; -> use nodejs
+
+CREATE TABLE nodejs.users (
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(20) NOT NULL,
+	age INT UNSIGNED NOT NULL,
+	married TINYINT NOT NULL,
+	COMMENT TEXT NULL,
+	created_at DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(id),
+	UNIQUE INDEX name_unique (name ASC))
+	COMMENT = '사용자 정보'
+	DEFAULT CHARSET=utf8
+	ENGINE=INNODB;
+
+; 입력전까진 실행되지 않는다.
+VARCHAR는 가변형
+몇백자 이내는 VARCHAR 그보다 길면 TEXT
+TINYINT는 -127~ 128까지의 정수를 저장할 때 사용
+UNSIGNED은 음수 무시 (나이와 같은 경우)
+UNIQUE INDEX사용시 고유값 지정되어 조회시 속도가 빨라진다.
+PRIMARY KEY는 자동으로 UNIQUE INDEX 포함.
