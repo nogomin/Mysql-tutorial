@@ -1,0 +1,9 @@
+시퀄라이즈
+ORM (object-relational Mapping)
+
+1. express learn-sequelize --view=pug로 새 프로젝트 생성
+2. 해당 프로젝트 이동후 npm 패키지 설치
+- npm i
+- npm i sequelize mysql2
+- npm i -g sequelize-cli
+- sequelize init

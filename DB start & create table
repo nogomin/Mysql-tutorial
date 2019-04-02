@@ -23,3 +23,7 @@ TINYINT는 -127~ 128까지의 정수를 저장할 때 사용
 UNSIGNED은 음수 무시 (나이와 같은 경우)
 UNIQUE INDEX사용시 고유값 지정되어 조회시 속도가 빨라진다.
 PRIMARY KEY는 자동으로 UNIQUE INDEX 포함.
+DEFAULT CHARSET utf8로 설정하지 않으면 한글 입력 불가
+ENGINE 종류에는 MyISAM과 InnoDB가 있다.
+
+* 외래키 설정 : constraint [제약조건명] foreign key [컬럼명] references [참고하는 컬럼명]

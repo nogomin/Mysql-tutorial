@@ -1,0 +1,12 @@
+#dependencies
+/node_modules
+
+#views
+/views
+
+#package
+/package.json
+/package-lock.json
+
+#config
+/config

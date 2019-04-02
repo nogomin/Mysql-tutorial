@@ -1,0 +1,7 @@
+1. INSERT INTO [table명] (컬럼1, 컬럼2 ..) VALUES ('데이터1', '데이터2');
+2. SELECT * FROM [table명];
+    SELECT id, name FROM users ORDER BY age DESC LIMIT 1 OFFSET 1;
+    *LIMIT [숫자] OFFSET [건너뛸 숫자]
+3. UPDATE users SET comment = '바꿀 내용' WHERE id = 2;
+4. DELETE FROM users WHERE id = 2;
+    
